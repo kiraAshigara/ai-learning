@@ -1,0 +1,500 @@
+transaction_id,date,customer_id,product_id,product_name,quantity,unit_price,total_amount,payment_method,store_location
+1,2025-02-18,C001,P118,Power Bank,2,49.99,99.98,Apple Pay,Dallas
+2,2025-06-17,C002,P108,Digital Camera,4,599.99,2399.96,Google Pay,Dallas
+3,2025-04-12,C003,P119,Noise Cancelling Headphones,4,199.99,799.96,Google Pay,New York
+4,2025-02-12,C004,P114,Wireless Mouse,1,49.99,49.99,Apple Pay,Chicago
+5,2025-04-14,C005,P113,Mechanical Keyboard,2,149.99,299.98,Credit Card,Dallas
+6,2025-03-08,C006,P103,Wireless Earbuds,4,149.99,599.96,Cash,Boston
+7,2025-02-06,C007,P108,Digital Camera,1,599.99,599.99,Credit Card,Boston
+8,2025-06-13,C008,P113,Mechanical Keyboard,1,149.99,149.99,Credit Card,Jacksonville
+9,2025-06-15,C009,P110,Smart Home Hub,5,129.99,649.95,Credit Card,Jacksonville
+10,2025-02-15,C010,P106,Gaming Console,2,399.99,799.98,Credit Card,Denver
+11,2025-04-13,C011,P120,Smart Bulb Pack,3,24.99,74.97,Google Pay,Philadelphia
+12,2025-02-13,C012,P119,Noise Cancelling Headphones,2,199.99,399.98,Google Pay,Columbus
+13,2025-04-24,C013,P115,Monitor LG,5,299.99,1499.95,Google Pay,New York
+14,2025-04-04,C014,P109,VR Headset,3,299.99,899.97,Google Pay,Boston
+15,2025-05-05,C015,P110,Smart Home Hub,2,129.99,259.98,Debit Card,Fort Worth
+16,2025-01-13,C016,P105,Tablet Mini,4,499.99,1999.96,Google Pay,Houston
+17,2025-02-08,C017,P109,VR Headset,4,299.99,1199.96,Cash,Chicago
+18,2025-05-23,C018,P113,Mechanical Keyboard,5,149.99,749.95,PayPal,Los Angeles
+19,2025-02-21,C019,P116,Webcam HD,4,89.99,359.96,Cash,Philadelphia
+20,2025-03-24,C020,P105,Tablet Mini,3,499.99,1499.97,Cash,Chicago
+21,2025-02-28,C021,P104,Smart Watch,2,249.99,499.98,Credit Card,San Diego
+22,2025-03-20,C022,P110,Smart Home Hub,4,129.99,519.96,Credit Card,Phoenix
+23,2025-03-26,C023,P120,Smart Bulb Pack,2,24.99,49.98,Cash,Indianapolis
+24,2025-02-15,C024,P112,External SSD,2,199.99,399.98,Debit Card,Austin
+25,2025-05-23,C025,P108,Digital Camera,1,599.99,599.99,Credit Card,Austin
+26,2025-02-07,C026,P120,Smart Bulb Pack,4,24.99,99.96,Cash,Boston
+27,2025-02-12,C027,P107,Bluetooth Speaker,1,79.99,79.99,PayPal,Indianapolis
+28,2025-04-18,C028,P112,External SSD,5,199.99,999.95,Cash,Jacksonville
+29,2025-02-14,C029,P105,Tablet Mini,1,499.99,499.99,Cash,Denver
+30,2025-05-06,C030,P106,Gaming Console,4,399.99,1599.96,Debit Card,Boston
+31,2025-05-12,C031,P111,Wireless Charger,4,29.99,119.96,Debit Card,New York
+32,2025-05-29,C032,P116,Webcam HD,4,89.99,359.96,Cash,Houston
+33,2025-01-26,C033,P102,Laptop Pro,2,1299.99,2599.98,Debit Card,San Jose
+34,2025-04-21,C034,P114,Wireless Mouse,4,49.99,199.96,Google Pay,Boston
+35,2025-01-07,C035,P101,Smartphone X,4,899.99,3599.96,PayPal,Houston
+36,2025-04-25,C036,P120,Smart Bulb Pack,2,24.99,49.98,Debit Card,Phoenix
+37,2025-04-19,C037,P112,External SSD,2,199.99,399.98,Google Pay,Boston
+38,2025-01-05,C038,P120,Smart Bulb Pack,5,24.99,124.95,Debit Card,San Diego
+39,2025-02-25,C039,P115,Monitor LG,5,299.99,1499.95,Apple Pay,Boston
+40,2025-02-04,C040,P111,Wireless Charger,2,29.99,59.98,Apple Pay,Columbus
+41,2025-04-20,C041,P105,Tablet Mini,3,499.99,1499.97,Debit Card,Dallas
+42,2025-04-17,C042,P110,Smart Home Hub,4,129.99,519.96,Cash,New York
+43,2025-01-22,C043,P120,Smart Bulb Pack,1,24.99,24.99,PayPal,Seattle
+44,2025-05-25,C044,P102,Laptop Pro,2,1299.99,2599.98,Google Pay,Philadelphia
+45,2025-05-21,C045,P105,Tablet Mini,1,499.99,499.99,Apple Pay,San Francisco
+46,2025-01-04,C046,P112,External SSD,5,199.99,999.95,Cash,Houston
+47,2025-01-26,C047,P105,Tablet Mini,3,499.99,1499.97,Cash,Denver
+48,2025-03-18,C048,P117,USB-C Hub,1,39.99,39.99,Google Pay,Charlotte
+49,2025-03-14,C049,P119,Noise Cancelling Headphones,1,199.99,199.99,PayPal,Charlotte
+50,2025-03-16,C050,P101,Smartphone X,2,899.99,1799.98,Debit Card,San Francisco
+51,2025-05-15,C051,P102,Laptop Pro,3,1299.99,3899.97,Cash,Houston
+52,2025-03-21,C052,P116,Webcam HD,2,89.99,179.98,Cash,Dallas
+53,2025-05-15,C053,P112,External SSD,2,199.99,399.98,Google Pay,Chicago
+54,2025-02-19,C054,P118,Power Bank,2,49.99,99.98,PayPal,Austin
+55,2025-04-11,C055,P106,Gaming Console,2,399.99,799.98,Cash,Seattle
+56,2025-01-07,C056,P109,VR Headset,3,299.99,899.97,Credit Card,New York
+57,2025-05-21,C057,P101,Smartphone X,5,899.99,4499.95,Cash,Philadelphia
+58,2025-03-04,C058,P104,Smart Watch,2,249.99,499.98,PayPal,Denver
+59,2025-05-15,C059,P114,Wireless Mouse,1,49.99,49.99,PayPal,Los Angeles
+60,2025-02-20,C060,P118,Power Bank,5,49.99,249.95,Credit Card,New York
+61,2025-05-22,C061,P108,Digital Camera,1,599.99,599.99,Google Pay,San Jose
+62,2025-05-20,C062,P110,Smart Home Hub,1,129.99,129.99,Cash,Austin
+63,2025-04-05,C063,P108,Digital Camera,1,599.99,599.99,Google Pay,Philadelphia
+64,2025-01-26,C064,P102,Laptop Pro,5,1299.99,6499.95,Apple Pay,San Antonio
+65,2025-03-31,C065,P101,Smartphone X,5,899.99,4499.95,Credit Card,Chicago
+66,2025-06-13,C066,P119,Noise Cancelling Headphones,5,199.99,999.95,Apple Pay,Houston
+67,2025-05-14,C067,P117,USB-C Hub,3,39.99,119.97,PayPal,Jacksonville
+68,2025-06-16,C068,P102,Laptop Pro,2,1299.99,2599.98,PayPal,Columbus
+69,2025-02-18,C069,P118,Power Bank,4,49.99,199.96,Google Pay,Dallas
+70,2025-04-05,C070,P116,Webcam HD,5,89.99,449.95,Credit Card,Fort Worth
+71,2025-05-30,C071,P106,Gaming Console,5,399.99,1999.95,Debit Card,Dallas
+72,2025-05-13,C072,P101,Smartphone X,4,899.99,3599.96,Cash,Boston
+73,2025-05-21,C073,P116,Webcam HD,2,89.99,179.98,Apple Pay,Chicago
+74,2025-04-24,C074,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Phoenix
+75,2025-04-10,C075,P101,Smartphone X,2,899.99,1799.98,PayPal,Austin
+76,2025-03-20,C076,P110,Smart Home Hub,1,129.99,129.99,PayPal,San Antonio
+77,2025-02-17,C077,P103,Wireless Earbuds,5,149.99,749.95,Credit Card,San Francisco
+78,2025-06-08,C078,P120,Smart Bulb Pack,3,24.99,74.97,Credit Card,San Jose
+79,2025-03-10,C079,P117,USB-C Hub,1,39.99,39.99,PayPal,Denver
+80,2025-01-13,C080,P111,Wireless Charger,3,29.99,89.97,Cash,Seattle
+81,2025-05-04,C081,P101,Smartphone X,2,899.99,1799.98,Credit Card,Columbus
+82,2025-02-10,C082,P115,Monitor LG,2,299.99,599.98,PayPal,New York
+83,2025-06-12,C083,P117,USB-C Hub,4,39.99,159.96,Google Pay,Charlotte
+84,2025-02-09,C084,P114,Wireless Mouse,5,49.99,249.95,PayPal,Indianapolis
+85,2025-03-08,C085,P104,Smart Watch,2,249.99,499.98,Apple Pay,Houston
+86,2025-03-22,C086,P115,Monitor LG,2,299.99,599.98,Debit Card,Boston
+87,2025-05-21,C087,P108,Digital Camera,2,599.99,1199.98,Google Pay,Seattle
+88,2025-02-07,C088,P110,Smart Home Hub,4,129.99,519.96,Google Pay,Fort Worth
+89,2025-01-16,C089,P113,Mechanical Keyboard,2,149.99,299.98,Debit Card,Fort Worth
+90,2025-01-04,C090,P116,Webcam HD,2,89.99,179.98,Apple Pay,Dallas
+91,2025-05-14,C091,P113,Mechanical Keyboard,3,149.99,449.97,Debit Card,Columbus
+92,2025-02-28,C092,P117,USB-C Hub,4,39.99,159.96,PayPal,Dallas
+93,2025-01-01,C093,P117,USB-C Hub,3,39.99,119.97,Credit Card,Houston
+94,2025-06-18,C094,P111,Wireless Charger,5,29.99,149.95,PayPal,San Antonio
+95,2025-03-29,C095,P112,External SSD,2,199.99,399.98,Apple Pay,Austin
+96,2025-06-05,C096,P110,Smart Home Hub,1,129.99,129.99,Google Pay,Dallas
+97,2025-04-19,C097,P116,Webcam HD,5,89.99,449.95,Apple Pay,Houston
+98,2025-04-03,C098,P113,Mechanical Keyboard,4,149.99,599.96,Credit Card,San Francisco
+99,2025-01-30,C099,P113,Mechanical Keyboard,4,149.99,599.96,Cash,Los Angeles
+100,2025-06-01,C100,P117,USB-C Hub,4,39.99,159.96,Google Pay,Los Angeles
+101,2025-02-11,C101,P111,Wireless Charger,3,29.99,89.97,Google Pay,Phoenix
+102,2025-05-11,C102,P115,Monitor LG,5,299.99,1499.95,Cash,Jacksonville
+103,2025-05-20,C103,P107,Bluetooth Speaker,3,79.99,239.97,Credit Card,Jacksonville
+104,2025-05-12,C104,P112,External SSD,3,199.99,599.97,Apple Pay,Dallas
+105,2025-05-22,C105,P101,Smartphone X,4,899.99,3599.96,PayPal,Fort Worth
+106,2025-02-13,C106,P112,External SSD,4,199.99,799.96,Apple Pay,Austin
+107,2025-01-07,C107,P112,External SSD,5,199.99,999.95,Google Pay,New York
+108,2025-04-28,C108,P102,Laptop Pro,5,1299.99,6499.95,Cash,Charlotte
+109,2025-01-10,C109,P113,Mechanical Keyboard,2,149.99,299.98,Apple Pay,Charlotte
+110,2025-03-05,C110,P120,Smart Bulb Pack,1,24.99,24.99,Google Pay,Philadelphia
+111,2025-06-01,C111,P105,Tablet Mini,3,499.99,1499.97,Cash,Jacksonville
+112,2025-04-12,C112,P105,Tablet Mini,1,499.99,499.99,Apple Pay,Austin
+113,2025-02-25,C113,P117,USB-C Hub,3,39.99,119.97,Debit Card,Columbus
+114,2025-05-29,C114,P107,Bluetooth Speaker,5,79.99,399.95,Cash,Los Angeles
+115,2025-03-12,C115,P114,Wireless Mouse,1,49.99,49.99,Apple Pay,San Francisco
+116,2025-04-16,C116,P105,Tablet Mini,4,499.99,1999.96,Cash,Dallas
+117,2025-04-15,C117,P119,Noise Cancelling Headphones,4,199.99,799.96,Cash,Philadelphia
+118,2025-05-28,C118,P102,Laptop Pro,4,1299.99,5199.96,Apple Pay,San Diego
+119,2025-06-05,C119,P112,External SSD,3,199.99,599.97,Cash,Seattle
+120,2025-02-24,C120,P105,Tablet Mini,1,499.99,499.99,Cash,Dallas
+121,2025-03-04,C121,P111,Wireless Charger,5,29.99,149.95,Cash,Fort Worth
+122,2025-05-08,C122,P117,USB-C Hub,3,39.99,119.97,Apple Pay,Seattle
+123,2025-06-13,C123,P109,VR Headset,3,299.99,899.97,Apple Pay,Los Angeles
+124,2025-06-16,C124,P104,Smart Watch,2,249.99,499.98,Debit Card,San Antonio
+125,2025-06-11,C125,P114,Wireless Mouse,3,49.99,149.97,Google Pay,Fort Worth
+126,2025-03-14,C126,P118,Power Bank,1,49.99,49.99,Debit Card,Columbus
+127,2025-04-16,C127,P106,Gaming Console,5,399.99,1999.95,Credit Card,Phoenix
+128,2025-04-05,C128,P103,Wireless Earbuds,2,149.99,299.98,Google Pay,Los Angeles
+129,2025-05-11,C129,P115,Monitor LG,2,299.99,599.98,Cash,Fort Worth
+130,2025-03-22,C130,P115,Monitor LG,4,299.99,1199.96,Apple Pay,San Antonio
+131,2025-01-04,C131,P120,Smart Bulb Pack,1,24.99,24.99,Google Pay,San Diego
+132,2025-01-18,C132,P104,Smart Watch,1,249.99,249.99,Cash,New York
+133,2025-05-25,C133,P119,Noise Cancelling Headphones,3,199.99,599.97,Apple Pay,Austin
+134,2025-06-15,C134,P114,Wireless Mouse,3,49.99,149.97,Debit Card,Indianapolis
+135,2025-02-16,C135,P118,Power Bank,5,49.99,249.95,Cash,Houston
+136,2025-02-01,C136,P106,Gaming Console,2,399.99,799.98,Credit Card,Chicago
+137,2025-03-13,C137,P112,External SSD,5,199.99,999.95,Debit Card,Philadelphia
+138,2025-01-12,C138,P105,Tablet Mini,2,499.99,999.98,Debit Card,Philadelphia
+139,2025-02-13,C139,P113,Mechanical Keyboard,5,149.99,749.95,Apple Pay,San Francisco
+140,2025-03-23,C140,P110,Smart Home Hub,5,129.99,649.95,Cash,San Francisco
+141,2025-02-26,C141,P108,Digital Camera,4,599.99,2399.96,Apple Pay,New York
+142,2025-05-15,C142,P105,Tablet Mini,4,499.99,1999.96,Debit Card,New York
+143,2025-05-21,C143,P106,Gaming Console,5,399.99,1999.95,PayPal,San Francisco
+144,2025-05-25,C144,P119,Noise Cancelling Headphones,2,199.99,399.98,Credit Card,San Diego
+145,2025-02-03,C145,P101,Smartphone X,1,899.99,899.99,PayPal,Austin
+146,2025-03-30,C146,P110,Smart Home Hub,3,129.99,389.97,PayPal,Austin
+147,2025-03-22,C147,P114,Wireless Mouse,1,49.99,49.99,Credit Card,Phoenix
+148,2025-02-10,C148,P111,Wireless Charger,3,29.99,89.97,PayPal,Charlotte
+149,2025-06-07,C149,P105,Tablet Mini,5,499.99,2499.95,Apple Pay,San Diego
+150,2025-02-23,C150,P115,Monitor LG,4,299.99,1199.96,PayPal,New York
+151,2025-04-16,C151,P109,VR Headset,5,299.99,1499.95,Apple Pay,New York
+152,2025-02-09,C152,P114,Wireless Mouse,1,49.99,49.99,Debit Card,Boston
+153,2025-05-11,C153,P109,VR Headset,5,299.99,1499.95,Credit Card,Philadelphia
+154,2025-05-05,C154,P108,Digital Camera,5,599.99,2999.95,Google Pay,Charlotte
+155,2025-06-12,C155,P102,Laptop Pro,3,1299.99,3899.97,Cash,Columbus
+156,2025-01-20,C156,P106,Gaming Console,5,399.99,1999.95,PayPal,San Diego
+157,2025-04-25,C157,P103,Wireless Earbuds,3,149.99,449.97,Apple Pay,San Antonio
+158,2025-05-31,C158,P107,Bluetooth Speaker,5,79.99,399.95,Cash,Charlotte
+159,2025-01-23,C159,P120,Smart Bulb Pack,4,24.99,99.96,Debit Card,Indianapolis
+160,2025-05-24,C160,P105,Tablet Mini,1,499.99,499.99,Apple Pay,Indianapolis
+161,2025-04-15,C161,P110,Smart Home Hub,1,129.99,129.99,Cash,Columbus
+162,2025-01-20,C162,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Charlotte
+163,2025-02-02,C163,P103,Wireless Earbuds,5,149.99,749.95,Debit Card,Chicago
+164,2025-01-07,C164,P104,Smart Watch,3,249.99,749.97,PayPal,Boston
+165,2025-02-21,C165,P114,Wireless Mouse,1,49.99,49.99,Cash,Seattle
+166,2025-01-11,C166,P102,Laptop Pro,4,1299.99,5199.96,PayPal,San Jose
+167,2025-05-23,C167,P110,Smart Home Hub,5,129.99,649.95,Debit Card,San Antonio
+168,2025-05-19,C168,P108,Digital Camera,4,599.99,2399.96,Cash,Columbus
+169,2025-05-17,C169,P110,Smart Home Hub,4,129.99,519.96,Apple Pay,Seattle
+170,2025-05-13,C170,P103,Wireless Earbuds,5,149.99,749.95,Credit Card,Austin
+171,2025-02-28,C171,P120,Smart Bulb Pack,5,24.99,124.95,Debit Card,Columbus
+172,2025-04-20,C172,P118,Power Bank,5,49.99,249.95,Credit Card,Austin
+173,2025-04-23,C173,P110,Smart Home Hub,3,129.99,389.97,Cash,Boston
+174,2025-02-28,C174,P113,Mechanical Keyboard,1,149.99,149.99,Google Pay,Chicago
+175,2025-04-16,C175,P109,VR Headset,1,299.99,299.99,Cash,Houston
+176,2025-01-01,C176,P119,Noise Cancelling Headphones,5,199.99,999.95,PayPal,San Diego
+177,2025-02-28,C177,P114,Wireless Mouse,2,49.99,99.98,PayPal,Los Angeles
+178,2025-02-16,C178,P109,VR Headset,2,299.99,599.98,Debit Card,Phoenix
+179,2025-06-07,C179,P103,Wireless Earbuds,3,149.99,449.97,PayPal,Denver
+180,2025-06-10,C180,P108,Digital Camera,4,599.99,2399.96,Cash,Dallas
+181,2025-05-29,C181,P104,Smart Watch,5,249.99,1249.95,PayPal,Jacksonville
+182,2025-03-18,C182,P101,Smartphone X,4,899.99,3599.96,PayPal,Houston
+183,2025-02-09,C183,P103,Wireless Earbuds,3,149.99,449.97,Credit Card,Phoenix
+184,2025-01-16,C184,P104,Smart Watch,1,249.99,249.99,PayPal,Seattle
+185,2025-01-07,C185,P109,VR Headset,4,299.99,1199.96,Apple Pay,Seattle
+186,2025-03-11,C186,P119,Noise Cancelling Headphones,3,199.99,599.97,Credit Card,Fort Worth
+187,2025-01-09,C187,P120,Smart Bulb Pack,4,24.99,99.96,Debit Card,Chicago
+188,2025-01-01,C188,P109,VR Headset,4,299.99,1199.96,Cash,Jacksonville
+189,2025-04-23,C189,P102,Laptop Pro,2,1299.99,2599.98,PayPal,Denver
+190,2025-03-18,C190,P119,Noise Cancelling Headphones,1,199.99,199.99,Credit Card,San Jose
+191,2025-03-25,C191,P114,Wireless Mouse,2,49.99,99.98,Google Pay,Philadelphia
+192,2025-05-15,C192,P103,Wireless Earbuds,4,149.99,599.96,Apple Pay,Los Angeles
+193,2025-03-29,C193,P119,Noise Cancelling Headphones,3,199.99,599.97,Google Pay,Denver
+194,2025-01-14,C194,P116,Webcam HD,5,89.99,449.95,Credit Card,San Francisco
+195,2025-03-05,C195,P114,Wireless Mouse,1,49.99,49.99,Cash,Denver
+196,2025-01-03,C196,P118,Power Bank,5,49.99,249.95,Credit Card,San Antonio
+197,2025-03-29,C197,P111,Wireless Charger,5,29.99,149.95,PayPal,Philadelphia
+198,2025-04-03,C198,P112,External SSD,2,199.99,399.98,Google Pay,Jacksonville
+199,2025-01-28,C199,P117,USB-C Hub,4,39.99,159.96,Debit Card,Chicago
+200,2025-04-17,C200,P108,Digital Camera,1,599.99,599.99,Apple Pay,Dallas
+201,2025-05-17,C201,P101,Smartphone X,1,899.99,899.99,Google Pay,San Jose
+202,2025-02-18,C202,P104,Smart Watch,4,249.99,999.96,PayPal,Houston
+203,2025-05-17,C203,P104,Smart Watch,3,249.99,749.97,PayPal,Chicago
+204,2025-05-24,C204,P117,USB-C Hub,5,39.99,199.95,Credit Card,Los Angeles
+205,2025-05-27,C205,P103,Wireless Earbuds,3,149.99,449.97,Google Pay,New York
+206,2025-04-29,C206,P106,Gaming Console,3,399.99,1199.97,Google Pay,Austin
+207,2025-04-01,C207,P102,Laptop Pro,3,1299.99,3899.97,PayPal,Indianapolis
+208,2025-05-12,C208,P109,VR Headset,5,299.99,1499.95,Debit Card,Charlotte
+209,2025-06-15,C209,P119,Noise Cancelling Headphones,3,199.99,599.97,Cash,New York
+210,2025-06-10,C210,P120,Smart Bulb Pack,3,24.99,74.97,PayPal,New York
+211,2025-05-25,C211,P107,Bluetooth Speaker,3,79.99,239.97,Apple Pay,Austin
+212,2025-02-06,C212,P119,Noise Cancelling Headphones,4,199.99,799.96,Google Pay,Chicago
+213,2025-05-08,C213,P102,Laptop Pro,2,1299.99,2599.98,Cash,Philadelphia
+214,2025-04-22,C214,P114,Wireless Mouse,3,49.99,149.97,Cash,Seattle
+215,2025-04-05,C215,P108,Digital Camera,5,599.99,2999.95,Apple Pay,Seattle
+216,2025-04-25,C216,P117,USB-C Hub,2,39.99,79.98,PayPal,Austin
+217,2025-02-05,C217,P108,Digital Camera,5,599.99,2999.95,PayPal,Chicago
+218,2025-06-19,C218,P112,External SSD,4,199.99,799.96,PayPal,Indianapolis
+219,2025-04-15,C219,P114,Wireless Mouse,3,49.99,149.97,Credit Card,San Antonio
+220,2025-05-04,C220,P105,Tablet Mini,1,499.99,499.99,PayPal,San Jose
+221,2025-03-10,C221,P111,Wireless Charger,4,29.99,119.96,Apple Pay,San Jose
+222,2025-01-17,C222,P105,Tablet Mini,3,499.99,1499.97,Google Pay,Philadelphia
+223,2025-03-25,C223,P115,Monitor LG,3,299.99,899.97,Credit Card,San Antonio
+224,2025-01-19,C224,P117,USB-C Hub,3,39.99,119.97,Google Pay,Denver
+225,2025-06-15,C225,P103,Wireless Earbuds,4,149.99,599.96,PayPal,Indianapolis
+226,2025-02-18,C226,P111,Wireless Charger,5,29.99,149.95,Debit Card,Houston
+227,2025-06-10,C227,P117,USB-C Hub,1,39.99,39.99,Debit Card,Austin
+228,2025-04-04,C228,P107,Bluetooth Speaker,3,79.99,239.97,Cash,Los Angeles
+229,2025-06-16,C229,P108,Digital Camera,5,599.99,2999.95,Credit Card,Jacksonville
+230,2025-05-28,C230,P108,Digital Camera,1,599.99,599.99,Credit Card,Charlotte
+231,2025-04-09,C231,P106,Gaming Console,3,399.99,1199.97,Cash,Chicago
+232,2025-02-24,C232,P116,Webcam HD,4,89.99,359.96,Apple Pay,Seattle
+233,2025-02-08,C233,P109,VR Headset,5,299.99,1499.95,Google Pay,Chicago
+234,2025-03-23,C234,P102,Laptop Pro,5,1299.99,6499.95,Cash,Seattle
+235,2025-04-25,C235,P108,Digital Camera,5,599.99,2999.95,Credit Card,Los Angeles
+236,2025-02-27,C236,P113,Mechanical Keyboard,5,149.99,749.95,Apple Pay,San Jose
+237,2025-02-16,C237,P111,Wireless Charger,5,29.99,149.95,Cash,New York
+238,2025-05-17,C238,P105,Tablet Mini,2,499.99,999.98,Debit Card,Fort Worth
+239,2025-06-06,C239,P114,Wireless Mouse,3,49.99,149.97,Cash,San Jose
+240,2025-03-24,C240,P114,Wireless Mouse,4,49.99,199.96,PayPal,Seattle
+241,2025-02-16,C241,P111,Wireless Charger,2,29.99,59.98,Credit Card,San Antonio
+242,2025-03-12,C242,P101,Smartphone X,3,899.99,2699.97,Debit Card,Dallas
+243,2025-03-21,C243,P116,Webcam HD,3,89.99,269.97,Credit Card,Austin
+244,2025-02-26,C244,P104,Smart Watch,3,249.99,749.97,Credit Card,Columbus
+245,2025-03-13,C245,P105,Tablet Mini,5,499.99,2499.95,Credit Card,New York
+246,2025-06-19,C246,P120,Smart Bulb Pack,4,24.99,99.96,Google Pay,San Diego
+247,2025-05-24,C247,P111,Wireless Charger,5,29.99,149.95,Credit Card,Fort Worth
+248,2025-01-09,C248,P116,Webcam HD,5,89.99,449.95,Credit Card,Houston
+249,2025-02-04,C249,P111,Wireless Charger,2,29.99,59.98,Apple Pay,San Antonio
+250,2025-05-03,C250,P104,Smart Watch,4,249.99,999.96,Cash,San Francisco
+251,2025-05-29,C251,P119,Noise Cancelling Headphones,3,199.99,599.97,PayPal,Seattle
+252,2025-03-06,C252,P101,Smartphone X,4,899.99,3599.96,Google Pay,San Jose
+253,2025-05-04,C253,P104,Smart Watch,5,249.99,1249.95,Cash,San Diego
+254,2025-04-24,C254,P112,External SSD,3,199.99,599.97,Cash,Philadelphia
+255,2025-06-11,C255,P117,USB-C Hub,3,39.99,119.97,Credit Card,San Diego
+256,2025-02-12,C256,P106,Gaming Console,4,399.99,1599.96,Google Pay,Indianapolis
+257,2025-05-24,C257,P112,External SSD,3,199.99,599.97,PayPal,Denver
+258,2025-04-15,C258,P112,External SSD,4,199.99,799.96,Cash,Fort Worth
+259,2025-06-02,C259,P111,Wireless Charger,1,29.99,29.99,Google Pay,Boston
+260,2025-02-21,C260,P112,External SSD,4,199.99,799.96,PayPal,San Diego
+261,2025-02-14,C261,P114,Wireless Mouse,5,49.99,249.95,Cash,Indianapolis
+262,2025-04-08,C262,P102,Laptop Pro,4,1299.99,5199.96,Apple Pay,Denver
+263,2025-02-16,C263,P106,Gaming Console,3,399.99,1199.97,Debit Card,Houston
+264,2025-01-25,C264,P104,Smart Watch,2,249.99,499.98,Cash,Seattle
+265,2025-02-17,C265,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Jacksonville
+266,2025-02-24,C266,P112,External SSD,3,199.99,599.97,PayPal,Columbus
+267,2025-04-23,C267,P104,Smart Watch,5,249.99,1249.95,Apple Pay,Indianapolis
+268,2025-05-02,C268,P111,Wireless Charger,4,29.99,119.96,Cash,Los Angeles
+269,2025-04-19,C269,P114,Wireless Mouse,1,49.99,49.99,PayPal,Jacksonville
+270,2025-01-04,C270,P116,Webcam HD,3,89.99,269.97,Credit Card,New York
+271,2025-01-29,C271,P112,External SSD,1,199.99,199.99,PayPal,Los Angeles
+272,2025-06-14,C272,P115,Monitor LG,2,299.99,599.98,Debit Card,Houston
+273,2025-04-30,C273,P110,Smart Home Hub,2,129.99,259.98,Apple Pay,San Francisco
+274,2025-01-04,C274,P118,Power Bank,1,49.99,49.99,Apple Pay,New York
+275,2025-01-15,C275,P113,Mechanical Keyboard,3,149.99,449.97,Credit Card,Austin
+276,2025-01-08,C276,P108,Digital Camera,1,599.99,599.99,PayPal,Charlotte
+277,2025-01-27,C277,P117,USB-C Hub,1,39.99,39.99,Google Pay,Philadelphia
+278,2025-03-28,C278,P120,Smart Bulb Pack,1,24.99,24.99,Debit Card,New York
+279,2025-06-13,C279,P116,Webcam HD,2,89.99,179.98,PayPal,Indianapolis
+280,2025-03-01,C280,P101,Smartphone X,2,899.99,1799.98,Debit Card,New York
+281,2025-04-05,C281,P112,External SSD,4,199.99,799.96,Google Pay,Chicago
+282,2025-01-22,C282,P102,Laptop Pro,2,1299.99,2599.98,Apple Pay,Boston
+283,2025-03-12,C283,P114,Wireless Mouse,5,49.99,249.95,Google Pay,New York
+284,2025-01-29,C284,P107,Bluetooth Speaker,2,79.99,159.98,Apple Pay,Chicago
+285,2025-01-24,C285,P105,Tablet Mini,2,499.99,999.98,Credit Card,San Antonio
+286,2025-05-05,C286,P109,VR Headset,1,299.99,299.99,Credit Card,San Diego
+287,2025-02-17,C287,P113,Mechanical Keyboard,1,149.99,149.99,Apple Pay,Chicago
+288,2025-03-10,C288,P118,Power Bank,3,49.99,149.97,Debit Card,Dallas
+289,2025-01-23,C289,P112,External SSD,1,199.99,199.99,Credit Card,Dallas
+290,2025-01-14,C290,P105,Tablet Mini,2,499.99,999.98,PayPal,Charlotte
+291,2025-04-09,C291,P113,Mechanical Keyboard,2,149.99,299.98,Debit Card,Columbus
+292,2025-04-06,C292,P102,Laptop Pro,3,1299.99,3899.97,PayPal,San Diego
+293,2025-01-13,C293,P101,Smartphone X,1,899.99,899.99,Apple Pay,Seattle
+294,2025-04-08,C294,P112,External SSD,3,199.99,599.97,PayPal,Dallas
+295,2025-02-02,C295,P105,Tablet Mini,3,499.99,1499.97,PayPal,San Diego
+296,2025-01-27,C296,P110,Smart Home Hub,2,129.99,259.98,Debit Card,Fort Worth
+297,2025-04-19,C297,P109,VR Headset,1,299.99,299.99,Credit Card,Seattle
+298,2025-05-13,C298,P104,Smart Watch,1,249.99,249.99,Credit Card,San Diego
+299,2025-06-01,C299,P110,Smart Home Hub,2,129.99,259.98,Google Pay,Houston
+300,2025-03-18,C300,P114,Wireless Mouse,1,49.99,49.99,PayPal,San Jose
+301,2025-05-26,C301,P113,Mechanical Keyboard,2,149.99,299.98,Google Pay,Jacksonville
+302,2025-06-11,C302,P106,Gaming Console,3,399.99,1199.97,Credit Card,Jacksonville
+303,2025-02-07,C303,P113,Mechanical Keyboard,5,149.99,749.95,Cash,Dallas
+304,2025-05-09,C304,P117,USB-C Hub,1,39.99,39.99,Debit Card,Houston
+305,2025-03-23,C305,P112,External SSD,2,199.99,399.98,Credit Card,Chicago
+306,2025-06-06,C306,P114,Wireless Mouse,3,49.99,149.97,PayPal,Charlotte
+307,2025-03-03,C307,P106,Gaming Console,1,399.99,399.99,Cash,Austin
+308,2025-01-30,C308,P107,Bluetooth Speaker,3,79.99,239.97,Apple Pay,New York
+309,2025-06-12,C309,P104,Smart Watch,2,249.99,499.98,Apple Pay,San Diego
+310,2025-04-07,C310,P119,Noise Cancelling Headphones,4,199.99,799.96,Google Pay,Phoenix
+311,2025-06-14,C311,P102,Laptop Pro,2,1299.99,2599.98,Apple Pay,San Francisco
+312,2025-03-13,C312,P108,Digital Camera,4,599.99,2399.96,PayPal,Columbus
+313,2025-05-30,C313,P112,External SSD,4,199.99,799.96,Google Pay,Dallas
+314,2025-03-10,C314,P115,Monitor LG,3,299.99,899.97,Apple Pay,San Antonio
+315,2025-02-16,C315,P113,Mechanical Keyboard,2,149.99,299.98,Credit Card,Fort Worth
+316,2025-03-15,C316,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Chicago
+317,2025-04-17,C317,P108,Digital Camera,2,599.99,1199.98,Credit Card,Indianapolis
+318,2025-01-25,C318,P112,External SSD,5,199.99,999.95,Cash,Houston
+319,2025-03-26,C319,P114,Wireless Mouse,5,49.99,249.95,Credit Card,Dallas
+320,2025-05-21,C320,P109,VR Headset,4,299.99,1199.96,Google Pay,Indianapolis
+321,2025-03-31,C321,P112,External SSD,3,199.99,599.97,Credit Card,San Diego
+322,2025-01-31,C322,P118,Power Bank,1,49.99,49.99,Apple Pay,San Jose
+323,2025-02-11,C323,P112,External SSD,3,199.99,599.97,Cash,Indianapolis
+324,2025-05-28,C324,P116,Webcam HD,5,89.99,449.95,Cash,Philadelphia
+325,2025-05-05,C325,P103,Wireless Earbuds,4,149.99,599.96,Credit Card,New York
+326,2025-06-19,C326,P115,Monitor LG,3,299.99,899.97,Debit Card,Columbus
+327,2025-04-18,C327,P119,Noise Cancelling Headphones,3,199.99,599.97,Credit Card,San Diego
+328,2025-01-23,C328,P106,Gaming Console,5,399.99,1999.95,Google Pay,Philadelphia
+329,2025-04-23,C329,P104,Smart Watch,2,249.99,499.98,PayPal,San Antonio
+330,2025-04-26,C330,P106,Gaming Console,1,399.99,399.99,Debit Card,Phoenix
+331,2025-05-27,C331,P117,USB-C Hub,1,39.99,39.99,PayPal,Houston
+332,2025-02-10,C332,P106,Gaming Console,4,399.99,1599.96,Cash,Denver
+333,2025-01-25,C333,P111,Wireless Charger,2,29.99,59.98,Credit Card,Phoenix
+334,2025-05-29,C334,P101,Smartphone X,5,899.99,4499.95,Cash,Seattle
+335,2025-03-06,C335,P115,Monitor LG,3,299.99,899.97,Credit Card,San Francisco
+336,2025-04-25,C336,P110,Smart Home Hub,2,129.99,259.98,Debit Card,San Jose
+337,2025-05-27,C337,P112,External SSD,3,199.99,599.97,Google Pay,Denver
+338,2025-02-20,C338,P102,Laptop Pro,4,1299.99,5199.96,Debit Card,Philadelphia
+339,2025-04-25,C339,P111,Wireless Charger,3,29.99,89.97,Google Pay,Columbus
+340,2025-02-27,C340,P108,Digital Camera,3,599.99,1799.97,Google Pay,Columbus
+341,2025-04-11,C341,P111,Wireless Charger,1,29.99,29.99,Apple Pay,San Diego
+342,2025-01-16,C342,P111,Wireless Charger,4,29.99,119.96,Credit Card,San Diego
+343,2025-03-21,C343,P111,Wireless Charger,5,29.99,149.95,Cash,San Antonio
+344,2025-06-19,C344,P117,USB-C Hub,3,39.99,119.97,Credit Card,San Jose
+345,2025-06-17,C345,P108,Digital Camera,4,599.99,2399.96,Debit Card,Boston
+346,2025-01-09,C346,P119,Noise Cancelling Headphones,5,199.99,999.95,PayPal,Fort Worth
+347,2025-02-06,C347,P117,USB-C Hub,3,39.99,119.97,Debit Card,Austin
+348,2025-01-18,C348,P105,Tablet Mini,4,499.99,1999.96,Debit Card,San Francisco
+349,2025-03-17,C349,P108,Digital Camera,5,599.99,2999.95,Debit Card,Indianapolis
+350,2025-02-07,C350,P103,Wireless Earbuds,4,149.99,599.96,Credit Card,San Jose
+351,2025-05-31,C351,P111,Wireless Charger,3,29.99,89.97,Cash,Denver
+352,2025-01-22,C352,P116,Webcam HD,2,89.99,179.98,Cash,Austin
+353,2025-05-26,C353,P109,VR Headset,2,299.99,599.98,PayPal,San Diego
+354,2025-01-03,C354,P106,Gaming Console,5,399.99,1999.95,Apple Pay,Columbus
+355,2025-06-01,C355,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Austin
+356,2025-05-07,C356,P110,Smart Home Hub,4,129.99,519.96,Apple Pay,San Diego
+357,2025-02-14,C357,P107,Bluetooth Speaker,3,79.99,239.97,Google Pay,Los Angeles
+358,2025-04-10,C358,P117,USB-C Hub,4,39.99,159.96,Debit Card,Houston
+359,2025-04-24,C359,P108,Digital Camera,5,599.99,2999.95,Debit Card,Columbus
+360,2025-04-01,C360,P101,Smartphone X,4,899.99,3599.96,Credit Card,Dallas
+361,2025-05-18,C361,P109,VR Headset,4,299.99,1199.96,Cash,San Jose
+362,2025-04-22,C362,P113,Mechanical Keyboard,3,149.99,449.97,Cash,Philadelphia
+363,2025-01-19,C363,P104,Smart Watch,1,249.99,249.99,Cash,San Antonio
+364,2025-02-18,C364,P104,Smart Watch,1,249.99,249.99,Cash,Charlotte
+365,2025-06-15,C365,P120,Smart Bulb Pack,5,24.99,124.95,Debit Card,Los Angeles
+366,2025-03-31,C366,P120,Smart Bulb Pack,3,24.99,74.97,Debit Card,Columbus
+367,2025-01-06,C367,P106,Gaming Console,4,399.99,1599.96,Debit Card,Jacksonville
+368,2025-03-21,C368,P113,Mechanical Keyboard,5,149.99,749.95,Debit Card,Dallas
+369,2025-01-25,C369,P107,Bluetooth Speaker,1,79.99,79.99,Debit Card,San Antonio
+370,2025-04-09,C370,P110,Smart Home Hub,5,129.99,649.95,PayPal,Houston
+371,2025-02-06,C371,P109,VR Headset,3,299.99,899.97,PayPal,Denver
+372,2025-02-28,C372,P108,Digital Camera,3,599.99,1799.97,Google Pay,Indianapolis
+373,2025-02-12,C373,P111,Wireless Charger,2,29.99,59.98,Cash,Boston
+374,2025-04-27,C374,P107,Bluetooth Speaker,4,79.99,319.96,Cash,Chicago
+375,2025-06-08,C375,P110,Smart Home Hub,4,129.99,519.96,Credit Card,Philadelphia
+376,2025-05-14,C376,P110,Smart Home Hub,4,129.99,519.96,PayPal,Boston
+377,2025-01-06,C377,P111,Wireless Charger,5,29.99,149.95,Google Pay,Houston
+378,2025-02-15,C378,P115,Monitor LG,2,299.99,599.98,Credit Card,Philadelphia
+379,2025-01-29,C379,P112,External SSD,4,199.99,799.96,Google Pay,Phoenix
+380,2025-06-03,C380,P113,Mechanical Keyboard,2,149.99,299.98,Credit Card,San Diego
+381,2025-03-17,C381,P106,Gaming Console,2,399.99,799.98,Cash,Austin
+382,2025-02-18,C382,P110,Smart Home Hub,3,129.99,389.97,Credit Card,San Francisco
+383,2025-03-21,C383,P103,Wireless Earbuds,3,149.99,449.97,Debit Card,Charlotte
+384,2025-01-01,C384,P119,Noise Cancelling Headphones,1,199.99,199.99,Credit Card,San Francisco
+385,2025-05-22,C385,P119,Noise Cancelling Headphones,4,199.99,799.96,Cash,Seattle
+386,2025-02-10,C386,P120,Smart Bulb Pack,4,24.99,99.96,Debit Card,Phoenix
+387,2025-03-23,C387,P116,Webcam HD,1,89.99,89.99,Apple Pay,New York
+388,2025-01-05,C388,P120,Smart Bulb Pack,3,24.99,74.97,PayPal,Columbus
+389,2025-02-26,C389,P115,Monitor LG,5,299.99,1499.95,PayPal,Los Angeles
+390,2025-06-09,C390,P103,Wireless Earbuds,1,149.99,149.99,Cash,Chicago
+391,2025-04-18,C391,P112,External SSD,2,199.99,399.98,Apple Pay,Seattle
+392,2025-05-29,C392,P113,Mechanical Keyboard,1,149.99,149.99,Credit Card,Columbus
+393,2025-01-11,C393,P118,Power Bank,4,49.99,199.96,Google Pay,Boston
+394,2025-04-21,C394,P114,Wireless Mouse,1,49.99,49.99,Debit Card,Fort Worth
+395,2025-01-14,C395,P107,Bluetooth Speaker,4,79.99,319.96,Google Pay,Jacksonville
+396,2025-01-17,C396,P108,Digital Camera,2,599.99,1199.98,Debit Card,Los Angeles
+397,2025-05-26,C397,P107,Bluetooth Speaker,3,79.99,239.97,PayPal,Columbus
+398,2025-04-20,C398,P118,Power Bank,3,49.99,149.97,Debit Card,Dallas
+399,2025-05-28,C399,P101,Smartphone X,4,899.99,3599.96,Cash,Charlotte
+400,2025-06-03,C400,P113,Mechanical Keyboard,5,149.99,749.95,PayPal,Denver
+401,2025-03-12,C401,P102,Laptop Pro,4,1299.99,5199.96,Debit Card,Columbus
+402,2025-05-04,C402,P118,Power Bank,5,49.99,249.95,Debit Card,Fort Worth
+403,2025-02-08,C403,P107,Bluetooth Speaker,5,79.99,399.95,PayPal,Boston
+404,2025-01-30,C404,P117,USB-C Hub,3,39.99,119.97,Credit Card,San Jose
+405,2025-04-02,C405,P112,External SSD,2,199.99,399.98,Debit Card,San Antonio
+406,2025-02-24,C406,P112,External SSD,5,199.99,999.95,Apple Pay,San Diego
+407,2025-02-19,C407,P117,USB-C Hub,2,39.99,79.98,Apple Pay,San Jose
+408,2025-05-07,C408,P115,Monitor LG,1,299.99,299.99,Google Pay,Charlotte
+409,2025-03-23,C409,P112,External SSD,5,199.99,999.95,Google Pay,Austin
+410,2025-05-08,C410,P112,External SSD,2,199.99,399.98,Credit Card,Austin
+411,2025-04-20,C411,P108,Digital Camera,3,599.99,1799.97,Debit Card,Seattle
+412,2025-05-18,C412,P102,Laptop Pro,4,1299.99,5199.96,Cash,Seattle
+413,2025-01-19,C413,P102,Laptop Pro,4,1299.99,5199.96,Apple Pay,Fort Worth
+414,2025-02-05,C414,P110,Smart Home Hub,4,129.99,519.96,Credit Card,Fort Worth
+415,2025-05-06,C415,P117,USB-C Hub,4,39.99,159.96,Debit Card,Phoenix
+416,2025-04-14,C416,P117,USB-C Hub,2,39.99,79.98,Google Pay,New York
+417,2025-03-03,C417,P103,Wireless Earbuds,1,149.99,149.99,PayPal,Indianapolis
+418,2025-06-05,C418,P104,Smart Watch,5,249.99,1249.95,Cash,San Diego
+419,2025-06-17,C419,P120,Smart Bulb Pack,5,24.99,124.95,Apple Pay,San Francisco
+420,2025-01-22,C420,P115,Monitor LG,3,299.99,899.97,Cash,Seattle
+421,2025-03-20,C421,P115,Monitor LG,4,299.99,1199.96,Apple Pay,Austin
+422,2025-01-03,C422,P120,Smart Bulb Pack,4,24.99,99.96,Credit Card,Austin
+423,2025-01-04,C423,P113,Mechanical Keyboard,1,149.99,149.99,Google Pay,Phoenix
+424,2025-05-11,C424,P117,USB-C Hub,3,39.99,119.97,Debit Card,Boston
+425,2025-03-18,C425,P117,USB-C Hub,4,39.99,159.96,PayPal,Indianapolis
+426,2025-01-11,C426,P111,Wireless Charger,1,29.99,29.99,Google Pay,Denver
+427,2025-06-06,C427,P113,Mechanical Keyboard,3,149.99,449.97,Debit Card,Boston
+428,2025-02-14,C428,P119,Noise Cancelling Headphones,5,199.99,999.95,Cash,Los Angeles
+429,2025-06-09,C429,P117,USB-C Hub,4,39.99,159.96,Credit Card,Indianapolis
+430,2025-06-09,C430,P101,Smartphone X,4,899.99,3599.96,Debit Card,San Antonio
+431,2025-02-13,C431,P105,Tablet Mini,3,499.99,1499.97,Apple Pay,San Jose
+432,2025-04-06,C432,P105,Tablet Mini,5,499.99,2499.95,Debit Card,Chicago
+433,2025-06-03,C433,P119,Noise Cancelling Headphones,5,199.99,999.95,Credit Card,San Francisco
+434,2025-06-17,C434,P101,Smartphone X,3,899.99,2699.97,Apple Pay,Boston
+435,2025-04-07,C435,P103,Wireless Earbuds,4,149.99,599.96,Apple Pay,Los Angeles
+436,2025-05-16,C436,P109,VR Headset,4,299.99,1199.96,PayPal,Los Angeles
+437,2025-05-13,C437,P106,Gaming Console,3,399.99,1199.97,Google Pay,Austin
+438,2025-03-16,C438,P107,Bluetooth Speaker,5,79.99,399.95,Apple Pay,Phoenix
+439,2025-04-14,C439,P120,Smart Bulb Pack,2,24.99,49.98,Credit Card,Denver
+440,2025-02-27,C440,P110,Smart Home Hub,3,129.99,389.97,Cash,Chicago
+441,2025-06-05,C441,P116,Webcam HD,3,89.99,269.97,Debit Card,Los Angeles
+442,2025-03-31,C442,P106,Gaming Console,2,399.99,799.98,Cash,Columbus
+443,2025-01-07,C443,P120,Smart Bulb Pack,4,24.99,99.96,Credit Card,San Jose
+444,2025-04-06,C444,P118,Power Bank,2,49.99,99.98,PayPal,Phoenix
+445,2025-03-07,C445,P104,Smart Watch,5,249.99,1249.95,Credit Card,San Jose
+446,2025-01-05,C446,P109,VR Headset,3,299.99,899.97,Credit Card,San Jose
+447,2025-02-04,C447,P117,USB-C Hub,1,39.99,39.99,PayPal,Indianapolis
+448,2025-06-08,C448,P117,USB-C Hub,3,39.99,119.97,Google Pay,New York
+449,2025-05-14,C449,P118,Power Bank,4,49.99,199.96,Apple Pay,San Antonio
+450,2025-01-25,C450,P112,External SSD,2,199.99,399.98,Google Pay,Los Angeles
+451,2025-04-10,C451,P101,Smartphone X,3,899.99,2699.97,Credit Card,Columbus
+452,2025-04-26,C452,P111,Wireless Charger,2,29.99,59.98,Cash,Dallas
+453,2025-05-03,C453,P111,Wireless Charger,4,29.99,119.96,PayPal,San Jose
+454,2025-05-02,C454,P104,Smart Watch,2,249.99,499.98,Cash,Philadelphia
+455,2025-05-25,C455,P118,Power Bank,5,49.99,249.95,PayPal,Indianapolis
+456,2025-01-04,C456,P107,Bluetooth Speaker,5,79.99,399.95,Credit Card,Dallas
+457,2025-02-11,C457,P110,Smart Home Hub,1,129.99,129.99,PayPal,Chicago
+458,2025-03-15,C458,P106,Gaming Console,2,399.99,799.98,Cash,Austin
+459,2025-01-02,C459,P114,Wireless Mouse,1,49.99,49.99,Credit Card,San Antonio
+460,2025-04-14,C460,P120,Smart Bulb Pack,2,24.99,49.98,Debit Card,Los Angeles
+461,2025-02-14,C461,P113,Mechanical Keyboard,3,149.99,449.97,Debit Card,Chicago
+462,2025-04-10,C462,P109,VR Headset,5,299.99,1499.95,PayPal,San Diego
+463,2025-02-08,C463,P105,Tablet Mini,3,499.99,1499.97,Cash,Seattle
+464,2025-05-26,C464,P111,Wireless Charger,4,29.99,119.96,Apple Pay,Phoenix
+465,2025-04-14,C465,P112,External SSD,4,199.99,799.96,Credit Card,Houston
+466,2025-01-12,C466,P115,Monitor LG,1,299.99,299.99,Cash,Charlotte
+467,2025-01-04,C467,P113,Mechanical Keyboard,2,149.99,299.98,Google Pay,San Antonio
+468,2025-05-19,C468,P117,USB-C Hub,1,39.99,39.99,Credit Card,Charlotte
+469,2025-04-19,C469,P117,USB-C Hub,2,39.99,79.98,Cash,Dallas
+470,2025-01-11,C470,P119,Noise Cancelling Headphones,5,199.99,999.95,Cash,Columbus
+471,2025-05-29,C471,P106,Gaming Console,2,399.99,799.98,Google Pay,Dallas
+472,2025-03-31,C472,P101,Smartphone X,2,899.99,1799.98,Credit Card,Charlotte
+473,2025-01-24,C473,P112,External SSD,5,199.99,999.95,Google Pay,Indianapolis
+474,2025-02-18,C474,P104,Smart Watch,4,249.99,999.96,Debit Card,Seattle
+475,2025-01-26,C475,P119,Noise Cancelling Headphones,1,199.99,199.99,Credit Card,New York
+476,2025-03-21,C476,P103,Wireless Earbuds,2,149.99,299.98,Credit Card,Jacksonville
+477,2025-02-15,C477,P106,Gaming Console,2,399.99,799.98,Debit Card,Fort Worth
+478,2025-02-22,C478,P116,Webcam HD,2,89.99,179.98,Google Pay,San Jose
+479,2025-02-15,C479,P116,Webcam HD,3,89.99,269.97,Credit Card,San Antonio
+480,2025-05-18,C480,P107,Bluetooth Speaker,3,79.99,239.97,PayPal,San Diego
+481,2025-01-27,C481,P106,Gaming Console,4,399.99,1599.96,Cash,Boston
+482,2025-04-30,C482,P110,Smart Home Hub,5,129.99,649.95,Google Pay,San Diego
+483,2025-03-08,C483,P114,Wireless Mouse,5,49.99,249.95,Debit Card,San Jose
+484,2025-05-02,C484,P119,Noise Cancelling Headphones,4,199.99,799.96,Apple Pay,Boston
+485,2025-05-07,C485,P106,Gaming Console,3,399.99,1199.97,Cash,Phoenix
+486,2025-04-09,C486,P110,Smart Home Hub,5,129.99,649.95,Cash,Chicago
+487,2025-02-15,C487,P111,Wireless Charger,4,29.99,119.96,Apple Pay,Houston
+488,2025-05-10,C488,P110,Smart Home Hub,4,129.99,519.96,Apple Pay,Chicago
+489,2025-05-29,C489,P118,Power Bank,3,49.99,149.97,Debit Card,Austin
+490,2025-04-04,C490,P103,Wireless Earbuds,5,149.99,749.95,Apple Pay,Dallas
+491,2025-05-29,C491,P106,Gaming Console,2,399.99,799.98,Cash,New York
+492,2025-02-14,C492,P113,Mechanical Keyboard,5,149.99,749.95,PayPal,Los Angeles
+493,2025-06-06,C493,P105,Tablet Mini,3,499.99,1499.97,Debit Card,Dallas
+494,2025-01-03,C494,P117,USB-C Hub,4,39.99,159.96,Credit Card,Indianapolis
+495,2025-02-24,C495,P110,Smart Home Hub,1,129.99,129.99,Credit Card,New York
+496,2025-01-18,C496,P114,Wireless Mouse,1,49.99,49.99,PayPal,New York
+497,2025-02-17,C497,P110,Smart Home Hub,5,129.99,649.95,Apple Pay,Los Angeles
+498,2025-02-17,C498,P111,Wireless Charger,2,29.99,59.98,PayPal,San Francisco
+499,2025-05-10,C499,P105,Tablet Mini,3,499.99,1499.97,Cash,Charlotte

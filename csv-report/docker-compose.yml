@@ -1,0 +1,91 @@
+name: ai-csv-report
+
+services:
+  n8n:
+    image: n8nio/n8n
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "127.0.0.1:5678:5678"
+    environment:
+      - N8N_LOG_LEVEL=debug
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./resources:/tmp/resources
+      - reports_data:/tmp/reports
+    depends_on:
+      - outlet-db
+      - mailhog
+    networks:
+      - ai-csv-report
+
+  outlet-db:
+    image: postgres:16
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      - POSTGRES_DB=outlet
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - ai-csv-report
+
+  mailhog:
+    image: mailhog/mailhog
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
+    networks:
+      - ai-csv-report
+
+  nginx:
+    image: nginx:latest
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - reports_data:/tmp/reports
+    command: /bin/sh -c "chmod -R 777 /tmp/reports && nginx -g 'daemon off;'"
+    networks:
+      - ai-csv-report
+
+  n8n-setup:
+    image: python:3.13-alpine
+    platform: linux/amd64
+    entrypoint: ["/bin/sh", "-c", "pip install httpx backoff && python /tmp/n8n-setup.py"]
+    environment:
+      - N8N_URL=http://n8n:5678
+      - N8N_EMAIL=${N8N_EMAIL}
+      - N8N_PASSWORD=${N8N_PASSWORD}
+      - OPEN_AI_API_KEY=${OPEN_AI_API_KEY}
+    volumes:
+      - ./n8n-setup.py:/tmp/n8n-setup.py:ro
+      - ./workflows:/tmp/workflows
+    depends_on:
+      - n8n
+      - outlet-db
+      - mailhog
+    networks:
+      - ai-csv-report
+
+volumes:
+  n8n_data:
+  postgres_data:
+  reports_data:
+
+networks:
+  ai-csv-report:

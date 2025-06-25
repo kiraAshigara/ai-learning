@@ -1,0 +1,672 @@
+{
+  "name": "csv-report",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        640,
+        -60
+      ],
+      "id": "ee4e5beb-da2f-4336-9363-e9aa02b32a03",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "value": "outlet",
+          "mode": "list",
+          "cachedResultName": "outlet"
+        },
+        "table": {
+          "__rl": true,
+          "value": "transactions",
+          "mode": "list",
+          "cachedResultName": "transactions"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "transaction_id"
+          ],
+          "schema": [
+            {
+              "id": "transaction_id",
+              "displayName": "transaction_id",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "date",
+              "displayName": "date",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "customer_id",
+              "displayName": "customer_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "product_id",
+              "displayName": "product_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "product_name",
+              "displayName": "product_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "quantity",
+              "displayName": "quantity",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "unit_price",
+              "displayName": "unit_price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "total_amount",
+              "displayName": "total_amount",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "payment_method",
+              "displayName": "payment_method",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "store_location",
+              "displayName": "store_location",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        900,
+        -60
+      ],
+      "id": "5aed9649-4ffc-41cf-bec1-6a827f05df61",
+      "name": "Insert Data",
+      "credentials": {
+        "postgres": {
+          "id": "0KvkfmZMYuFFS46R",
+          "name": "Outlet DB"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CREATE SCHEMA IF NOT EXISTS outlet;\n\nCREATE TABLE IF NOT EXISTS outlet.transactions (\n  transaction_id VARCHAR(50) PRIMARY KEY,\n  date DATE NOT NULL,\n  customer_id VARCHAR(50),\n  product_id VARCHAR(50),\n  product_name VARCHAR(255),\n  quantity INTEGER,\n  unit_price DECIMAL(10,2),\n  total_amount DECIMAL(10,2),\n  payment_method VARCHAR(50),\n  store_location VARCHAR(255)\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        -20,
+        -60
+      ],
+      "id": "5443632d-5c25-4fde-a61c-1d7ec8d6d47a",
+      "name": "Prepare DB",
+      "credentials": {
+        "postgres": {
+          "id": "0KvkfmZMYuFFS46R",
+          "name": "Outlet DB"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "{{ $fromAI('query') }}",
+        "options": {
+          "queryBatching": "transaction"
+        }
+      },
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.6,
+      "position": [
+        20,
+        420
+      ],
+      "id": "79ba667d-9935-4ae6-8f36-8cb2245bdd1e",
+      "name": "Execute Query",
+      "credentials": {
+        "postgres": {
+          "id": "0KvkfmZMYuFFS46R",
+          "name": "Outlet DB"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# PostgreSQL SQL Agent Instructions\n\nYou are an expert postgres sql agent.\n\n## Rules:\n- Use SELECT statements only\n- INSERT, DELETE, UPDATE statements are restricted\n- Create a single query\n\n## Database structure:\n{{ $('Prepare DB').params.query }}\n\n## Reports to create:\n- Create a report to show the total sales by products\n- Create a report to show the low stock, less than 100 units, use the columns declared above\n- Create a report to show total sales by every day\n\n## Output\n\n- Wait until all queries are executed\n- Join the responses in one json\n- Minify the json to prevent special characters",
+        "options": {
+          "maxIterations": 10
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -220,
+        220
+      ],
+      "id": "27f416a2-c9d9-495e-93fd-e6bb760381fa",
+      "name": "AI Agent - Getting Reports Data",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# Plotly.js Agent Instructions\n\nYou are an expert plotly.js agent. Taken the Json data as entry point generate charts to visualize the reports.\n\n## Rules:\n- Create only one html including all resources together\n\n## Json data:\n{{ $json.output }}\n\n## Docs\n\n- If you need documentation for bar charts you can go to https://plotly.com/javascript/bar-charts/\n- If you need documentation for line charts you can go to https://plotly.com/javascript/line-charts/\n\n## Output\n\n- Use bar charts\n- For total sales by day report use base line plot\n- Add a small explanation about each chart\n- For total sales by day use a line chart\n- Put the charts in columns\n- Don't enclose the content between ``` or ```html\n- Prevent special characters like \\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        360,
+        220
+      ],
+      "id": "3a3ea0c5-3094-4463-81c5-3dc3498fbe9a",
+      "name": "AI Agent - Generate Charts"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=# Email Template Agent Instructions\n\nYou are an expert email template agent. You are gonna createa a html email, with header, body and footer.\n\n## Rules:\n- Follow the best practices to prevent the email go to spam box\n\n## Presigned url:\n{{ $json.report_url }}\n\n## Output\n\n- Download and use this html as template https://github.com/leemunroe/responsive-html-email-template/blob/master/email.html\n- Modify the text to reflect the topic about report sales\n- Modify the link to use the presigned url in a new tab\n- Minify the content to prevent special characters\n- Don't enclose the content between ``` or ```html",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        800,
+        620
+      ],
+      "id": "4fefe6a6-21f8-4dc9-850d-e2a68e1626ea",
+      "name": "AI Agent - Generate email"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "1"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -160,
+        440
+      ],
+      "id": "b2dbf84c-f4e9-41cd-a283-310f04e1b6df",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        -60
+      ],
+      "id": "500522ef-a097-4e7a-b957-ccbc44d92b9b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "2"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        480,
+        420
+      ],
+      "id": "b5ebb61f-313e-4930-bd8a-2129be739736",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import base64\n\ninput = _input.all()\ninput_dict = input.to_py()\n\nhtml_content = input_dict[0]['json']['output']\n\n# Convert to binary\nhtml_binary = html_content.encode('utf-8')\n\n# Return as n8n binary item\nreturn [\n    {\n        \"binary\": {\n            \"data\": {\n                \"data\": base64.b64encode(html_binary).decode('utf-8'),\n                \"mimeType\": \"text/html\",\n                \"fileName\": \"report.html\"\n            }\n        }\n    }\n]"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        220
+      ],
+      "id": "11696824-5a0d-4e00-8c89-5c03ed9bcd9f",
+      "name": "Create HTML Report"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "1"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        920,
+        820
+      ],
+      "id": "dfeb0193-b2ab-4949-9c7c-5ba3e2acb41c",
+      "name": "Simple Memory2"
+    },
+    {
+      "parameters": {
+        "fromEmail": "support@localhost.com",
+        "toEmail": "dev@localhost.com",
+        "subject": "Sales Weekly Report",
+        "html": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1240,
+        620
+      ],
+      "id": "02852633-d303-4c20-b2bd-6d0f969b9e9e",
+      "name": "Send Email",
+      "webhookId": "17259654-69c1-4b80-826e-2238c771ad11",
+      "credentials": {
+        "smtp": {
+          "id": "kxPVwa76WORu70We",
+          "name": "SMTP MailHog"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/tmp/reports/{{ $execution.id }}.html",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        220
+      ],
+      "id": "37de1b1f-0c36-4d54-bd1d-4189585d70a6",
+      "name": "Save file to Local",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0f7dc368-13b8-415f-913f-68f808e30622",
+              "name": "=report_url",
+              "value": "=http://localhost:8080/{{ $json.fileName.replace('/tmp/reports/', '') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1320,
+        220
+      ],
+      "id": "726f32a3-da1f-404f-92f3-2dc6a12c1e84",
+      "name": "Get Report Url"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/tmp/resources/sales_week.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        300,
+        -60
+      ],
+      "id": "f43b915d-07a3-40ef-b267-a25d381d8a0e",
+      "name": "Read CSV file from Local"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -340,
+        440
+      ],
+      "id": "b0304372-e7c2-47d0-92ef-bc4841533024",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "pvRjTt4E5BAYRHAA",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        300,
+        420
+      ],
+      "id": "e09cfba3-7a40-4dbd-8355-1a3366e5f1f7",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "pvRjTt4E5BAYRHAA",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        720,
+        820
+      ],
+      "id": "26b5703f-0803-43af-9898-471ea5a74466",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "pvRjTt4E5BAYRHAA",
+          "name": "OpenAI Account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Insert Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Data": {
+      "main": [
+        [
+          {
+            "node": "AI Agent - Getting Reports Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare DB": {
+      "main": [
+        [
+          {
+            "node": "Read CSV file from Local",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Query": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent - Getting Reports Data",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent - Getting Reports Data": {
+      "main": [
+        [
+          {
+            "node": "AI Agent - Generate Charts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent - Generate Charts": {
+      "main": [
+        [
+          {
+            "node": "Create HTML Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent - Generate email": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent - Getting Reports Data",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Prepare DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent - Generate Charts",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create HTML Report": {
+      "main": [
+        [
+          {
+            "node": "Save file to Local",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory2": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent - Generate email",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save file to Local": {
+      "main": [
+        [
+          {
+            "node": "Get Report Url",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Report Url": {
+      "main": [
+        [
+          {
+            "node": "AI Agent - Generate email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CSV file from Local": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent - Getting Reports Data",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent - Generate Charts",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent - Generate email",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7476a176-4511-416a-9c64-085dc297fe1a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0b5511b5f0f283c097b482f9425112e2ffd704be8b1b5433b063b8d435a300e3"
+  },
+  "id": "p5K8pkDI3kERfEre",
+  "tags": []
+}
