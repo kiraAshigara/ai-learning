@@ -186,6 +186,21 @@ class N8NSetup:
         else:
             raise Exception('Failed to create workflow')
 
+    @backoff.on_exception(backoff.constant, Exception, interval=1, max_tries=5)
+    def get_workflow_names(self) -> list[str] | None:
+        r = httpx.get(
+            f'{N8N_URL}/rest/workflows?includeScopes=true&filter=%7B%22isArchived%22%3Afalse%7D&skip=0&take=50&sortBy=updatedAt%3Adesc',
+            headers=self.headers
+        )
+
+        names = []
+
+        if r.status_code == 200:
+            for i in r.json()['data']:
+                names.append(i['name'])
+
+        return names
+
 
 n8n = N8NSetup()
 
@@ -235,6 +250,10 @@ with open('/tmp/workflows/csv_report.json', 'r') as file:
         elif node.get('credentials', {}).get('smtp', {}).get('name') == 'SMTP MailHog':
             node['credentials']['smtp']['id'] = smtp_crd_id
 
-    n8n.create_workflow(data=data)
+    workflow_name = data.get('name')
+    workflows_names = n8n.get_workflow_names()
+
+    if workflow_name not in workflows_names:
+        n8n.create_workflow(data=data)
 
 logger.info('N8N setup successfully')
